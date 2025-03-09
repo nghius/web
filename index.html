@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz - PTIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        header .logo img {
+            width: 35px;
+        }
+
+        .language-switcher {
+            position: absolute;
+            left: 20px;
+            font-size: 10px;
+        }
+
+        .language-container {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .language-container i {
+            margin-right: 5px;
+        }
+
+        .language-container select {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 10px;
+            appearance: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .search-form {
+            position: absolute;
+            right: 80px;
+        }
+
+        .search-form button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .loginForm {
+            position: absolute;
+            right: 20px;
+        }
+
+        .loginForm button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .loginForm button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .hero-bottom a {
+            color: black;
+            text-decoration: none;
+            font-size: 0.41cm;
+            font-weight: bold;
+            border: 2px solid white;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: white; 
+            display: inline-block; 
+            transform: skew(-20deg);
+            margin: 0 5px; 
+            flex: 1;
+            text-align: center;
+            width: 115px;
+        }
+
+        .hero-bottom a:hover {
+            background-color: black; 
+            color: white; 
+        }
+
+        .hero-bottom a span {
+            display: inline-block; 
+            transform: skew(20deg); 
+            font-size: 15.6px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                circle at center,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 1) 90%
+            );
+            z-index: 0;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="language-switcher">
+            <div class="language-container">
+                <i class="fas fa-globe"></i>
+                <select id="language-select">
+                    <option value="vn">Tiếng Việt</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+        <div class="logo">
+            <a href="MB.html">
+                <img src="MB-star_n_web.svg" width="35" alt="Mercedes-Benz Logo">
+            </a>
+        </div>
+        <div class="search-form">
+            <button type="submit">
+                <a>Tìm Kiếm</a>
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="loginForm">
+            <button type="submit">
+                <a href="Đăng-Nhập-MB.html">Đăng Nhập</a>
+            </button>
+        </div>
+    </header>
+    <nav>
+        <a href="#home">Trang Chủ</a>
+        <a href="#models-section">Dòng Xe</a> <!-- Cập nhật liên kết này -->
+        <a href="#about">Tìm Hiểu Thêm</a>
+        <a href="#contact">Liên Hệ</a>
+    </nav>
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="The New C-Class- World Premiere - Trailer.mp4" type="video/mp4">
+        </video>
+        <h1>Khám Phá Thế Giới Mercedes-Benz</h1>
+        <div class="hero-bottom" id="models-section"> <!-- Thêm id ở đây -->
+            <a href="Mercedes-Benz.html" class="btn">
+                <span>Mercedes-Benz</span>
+            </a>
+            <a href="#AMG" class="btn">
+                <span>AMG</span>
+            </a>
+            <a href="#MAYBACH" class="btn">
+                <span>MAYBACH</span>
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <section id="models">
+            <h2>Dòng Xe-<h5>Khám phá các dòng xe sang trọng và hiện đại của chúng tôi.</h5></h2>
+           
+        </section>
+        <section id="about">
+            <h2>Tìm Hiểu Thêm</h2>
+            <p>Mercedes-Benz - Biểu tượng của sự sang trọng và công nghệ tiên tiến.</p>
+        </section>
+        <section id="contact">
+            <h2>Liên Hệ</h2>
+            <p>Liên hệ với chúng tôi để biết thêm thông tin.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Mercedes-Benz. Tất cả quyền được bảo lưu.</p>
+    </footer>
+    <script type="text/javascript" src="MB.js"></script>
+</body>
+</html>
